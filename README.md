@@ -66,6 +66,7 @@ src
    ├─ pdf.worker.ts             # Puppeteer Worker
    ├─ pdf.merge.ts              # pdf-lib 合并与书签
    └─ index.ts                  # PDF 模块入口
+...
 ```
 
 ---
@@ -93,17 +94,18 @@ npm install
 
 ---
 
-## 环境变量配置
+## 用户变量配置
 
-在项目根目录创建 `.env` 文件：
+在src/config/user保存信息：
 
 ```env
-COOKIE=your_cookie_here
+USER_NAME,
+USER_PASSWORD
 ```
 
 说明：
 
-* Cookie 会在运行过程中自动校验
+* 输入后自动获取Cookie，并会在运行过程中自动校验
 * 若缺失或失效，将触发重新获取流程
 
 ---
@@ -177,7 +179,7 @@ src/newpdf/worker.js
 ### 3. 运行程序
 
 ```bash
-ts-node src/index.ts
+ts-node -P tsconfig.json -r tsconfig-paths/register src/index.ts
 ```
 
 ---
@@ -188,15 +190,6 @@ ts-node src/index.ts
 * 模块化设计，易于扩展
 * PDF / EPUB 双格式支持
 * 适合批量、大规模内容处理
-
----
-
-## 可扩展方向
-
-* CLI 工具封装
-* 任务断点续传
-* 多站点内容适配
-* Docker / CI 集成
 
 ---
 
