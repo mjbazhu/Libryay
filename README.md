@@ -88,3 +88,8 @@ archiver
 ## 3.获取内容
 ## 4.下载
 ## 5.合并
+
+# 6.使用说明
+## npm install
+## 运行tsc -w 将dist/newpdf下的workjs移动到src/newpdf中
+## 使用时更新信息
