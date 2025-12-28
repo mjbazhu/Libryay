@@ -1,12 +1,13 @@
 node_modules
-package-lock.json
-tsconfig.dev.json
 dist
-books
 .vscode
+.env
 others
 tests
 victory
+books
 src/pdf
 src/newPdf/worker.js
-.env
+cookie.json
+package-lock.json
+tsconfig.dev.json

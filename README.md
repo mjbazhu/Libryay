@@ -3,32 +3,32 @@
 
 
 # 1.整体结构
-src/
+src
 ├─ index.ts
 │
-├─ clients/
+├─ clients
 │  └─ zlibrary.client.ts
 │
-├─ services/
+├─ services
 │  ├─ zlibrary.service.ts
 │  ├─ epub.service.ts
 │  └─ pdf.service.ts
 │
-├─ parsers/
+├─ parsers
 │  ├─ search.parser.ts
 │  ├─ book-key.parser.ts
 │  └─ epub-opf.parser.ts
 │
-├─ storage/
+├─ storage
 │  ├─ epub.storage.ts
 │  └─ pdf.storage.ts
 |  |_ worker.storage.ts
 │
-├─ types/
+├─ types
 │  └─ zlibrary.ts
 |  |_ worker.ts
 │
-└─ utils/
+└─ utils
    ├─ cookie.ts
    └─ filename.ts
 ...
