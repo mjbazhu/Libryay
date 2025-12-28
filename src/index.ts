@@ -8,8 +8,6 @@ import { AxiosParams } from '@/types/zlibrary';
 import { epubMerge } from '@/merge/epub.merge';
 import { pdfMergeAndClean } from '@/merge/pdf.merge';
 import { getLine } from '@/utils/readline';
-import { AUTHOR_COOKIE } from './config/cookies';
-
 
 (async () => {
 
