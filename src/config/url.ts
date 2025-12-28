@@ -10,5 +10,8 @@ export const KEY_URL = 'https://z-library.mn';
 // 书籍信息
 export const BOOK_INFOS_URL = 'https://reader.z-library.mn/api/prepare-book';
 
-// 
+// access_token
 export const ACCESS_URL = 'https://reader.z-library.mn/api/auth/get-credentials';
+
+// sectionUrl
+export const SOURCE_URL = 'https://reader.z-library.mn/api/fetch-config';

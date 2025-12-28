@@ -5,13 +5,13 @@ import { parseBookKeys } from '@/parsers/book-key.parser';
 import { BookInfo, BookType, BookKeys } from '@/types/zlibrary';
 import { CTokenGenerator } from '@/utils/cookie/cookies';
 import { CookieJar } from '@/utils/cookie/cookie-jar';
-import { ACCESS_URL, BOOK_INFOS_URL, CONTENT_URL, KEY_URL, SEARCH_URL } from '@/config/url';
+import { ACCESS_URL, BOOK_INFOS_URL, KEY_URL, SEARCH_URL, SOURCE_URL } from '@/config/url';
 
 export class ZLibraryService {
   private baseUrl = SEARCH_URL;
   private keyUrl = KEY_URL;
   private bookUrl = BOOK_INFOS_URL;
-  private configUrl = CONTENT_URL;
+  private configUrl = SOURCE_URL;
   private accessUrl = ACCESS_URL;
   private http!: AxiosInstance;
   private cookieJar!: CookieJar;
@@ -60,8 +60,8 @@ export class ZLibraryService {
       client_key: ctx.clientKey,
       signature: ctx.signature,
       source: ctx.source,
-      user_id: '',
-      user_key: '',
+      user_id: this.cookieJar.get('remix_userid'),
+      user_key: this.cookieJar.get('remix_userkey'),
       user_flush: 0
     }
     );

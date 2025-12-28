@@ -9,7 +9,9 @@ export function parseBookKeys(html: string): BookKeys {
   }
   return {
     clientKey: href.match(/\?client_key=(.*?)&/)?.[1]!,
-    signature: href.match(/&signature=(.*)&?/)?.[1]!,
+    signature: href.match(/&signature=(.*?)&/)?.[1]!,
     source: href.match(/\/read\/(.*?)\//)?.[1]!
   };
 }
+
+
